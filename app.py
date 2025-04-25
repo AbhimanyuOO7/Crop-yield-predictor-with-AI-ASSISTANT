@@ -10,11 +10,11 @@ area_options = sorted(df["Area"].unique())
 item_options = sorted(df["Item"].unique())
 
 # Load models
-dtr = pickle.load(open('C:/Users/ABHIMANYU.M.B/Desktop/Crop Predicter AI/Crop_Yield_Prediction-main/dtr.pkl', 'rb'))
-preprocessor = pickle.load(open('C:/Users/ABHIMANYU.M.B/Desktop/Crop Predicter AI/Crop_Yield_Prediction-main/preprocesser.pkl', 'rb'))
+dtr = pickle.load(open('dtr.pkl', 'rb'))
+preprocessor = pickle.load(open('preprocesser.pkl', 'rb'))
 
 # Configure Gemini API
-genai.configure(api_key="AIzaSyBrYfsMZL4ZKwvqf2T3SO6eK_QEJpzMkUQ")  # Replace with your Gemini API key
+genai.configure(api_key="API KEY")  # Replace with your Gemini API key
 gemini_model = genai.GenerativeModel('gemini-1.5-flash')
 
 # Flask app
